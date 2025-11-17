@@ -1,0 +1,51 @@
+{
+  "roads": [
+    { "id": 1, "x": 470, "y": 80,  "w": 60,  "h": 520, "type": "big" },
+    { "id": 2, "x": 200, "y": 300, "w": 600, "h": 60,  "type": "big" }
+  ],
+
+  "hubs": [
+    { "id": 1, "x": 500, "y": 120, "name": "North", "rate": 3, "rot": 0 },
+    { "id": 2, "x": 500, "y": 560, "name": "South", "rate": 3, "rot": 180 },
+    { "id": 3, "x": 260, "y": 330, "name": "West",  "rate": 3, "rot": 270 },
+    { "id": 4, "x": 740, "y": 330, "name": "East",  "rate": 3, "rot": 90 }
+  ],
+
+  "nodes": [
+    { "id": 10, "x": 500, "y": 150, "type": "hub_out", "hub_id": 1 },
+    { "id": 11, "x": 500, "y": 210, "type": "hub_in",  "hub_id": 1 },
+
+    { "id": 12, "x": 500, "y": 530, "type": "hub_in",  "hub_id": 2 },
+    { "id": 13, "x": 500, "y": 470, "type": "hub_out", "hub_id": 2 },
+
+    { "id": 14, "x": 290, "y": 330, "type": "hub_out", "hub_id": 3 },
+    { "id": 15, "x": 350, "y": 330, "type": "hub_in",  "hub_id": 3 },
+
+    { "id": 16, "x": 710, "y": 330, "type": "hub_in",  "hub_id": 4 },
+    { "id": 17, "x": 650, "y": 330, "type": "hub_out", "hub_id": 4 }
+  ],
+
+  "joins": [
+    { "id": 1, "x": 500, "y": 330 }
+  ],
+
+  "lanes": [
+    { "id": 20, "points": [[500,150],[500,250]], "dir": "A->B", "start_node": 10, "end_node": 1 },
+    { "id": 21, "points": [[500,410],[500,530]], "dir": "A->B", "start_node": 1, "end_node": 12 },
+
+    { "id": 22, "points": [[350,330],[450,330]], "dir": "A->B", "start_node": 15, "end_node": 1 },
+    { "id": 23, "points": [[550,330],[650,330]], "dir": "A->B", "start_node": 1, "end_node": 16 },
+
+    { "id": 24, "points": [[500,470],[500,410]], "dir": "A->B", "start_node": 13, "end_node": 1 },
+    { "id": 25, "points": [[450,330],[290,330]], "dir": "A->B", "start_node": 1, "end_node": 14 },
+
+    { "id": 26, "points": [[500,250],[550,330]], "dir": "A->B", "start_node": 1, "end_node": 23 },
+    { "id": 27, "points": [[450,330],[500,210]], "dir": "A->B", "start_node": 1, "end_node": 11 },
+
+    { "id": 28, "points": [[500,250],[350,330]], "dir": "A->B", "start_node": 1, "end_node": 15 },
+    { "id": 29, "points": [[650,330],[500,410]], "dir": "A->B", "start_node": 17, "end_node": 1 }
+  ],
+
+  "lights": [],
+  "symbols": []
+}
